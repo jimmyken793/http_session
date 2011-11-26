@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "http_session"
   gem.homepage = "http://github.com/jimmyken793/http_session"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Offers a simple interface for using http with cookie-based session.}
+  gem.description = %Q{}
   gem.email = "jimmyken793@gmail.com"
   gem.authors = ["Jimmy Cheng"]
   # dependencies defined in Gemfile
