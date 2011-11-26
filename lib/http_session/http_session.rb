@@ -5,7 +5,7 @@ require 'iconv'
 require 'net/http'
 require 'uri'
 require 'set'
-require "addressable/uri"
+require 'addressable/uri'
 
 class Hash
       def urlencode
@@ -38,8 +38,6 @@ class HTTPSession
 			if param=='?'
 				param=''
 			end
-            puts url.path+param
-            puts header
 			resp=http.get(url.path+param,header)
 			if resp['set-cookie']!= nil
                 uri.query=resp['set-cookie'];
@@ -60,9 +58,6 @@ class HTTPSession
             uri.query_values = @cookie
             header['cookie'] = uri.query if uri.query != nil
             uri.query_values = params
-            puts url.path
-            puts uri.query
-            puts header
 			resp=http.post(url.path,uri.query,header)
 			if resp['set-cookie']!=nil
 				uri.query=resp['set-cookie'];
